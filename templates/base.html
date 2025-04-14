@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Холодная война - История противостояния</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="{{ url_for('index') }}" class="navbar-brand">Холодная война</a>
+            <ul class="navbar-nav justify-content-center">
+                <li class="nav-item">
+                    <a href="{{ url_for('test') }}" class="nav-link">Тест</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('about') }}" class="nav-link">О проекте</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    {% block content %}{% endblock %}
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

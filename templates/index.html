@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main-container">
+    {% for section in sections %}
+    <section id="section-{{ section.id }}" class="section" style="background-image: url('{{ section.image }}')">
+        <div class="content-wrapper">
+            <h2>{{ section.title }}</h2>
+            <h3>{{ section.subtitle }}</h3>
+            <p>{{ section.description }}</p>
+        </div>
+    </section>
+    {% endfor %}
+    
+    <!-- Единый блок навигации -->
+    <div class="navigation-dots"></div>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container" style="background: linear-gradient(to bottom, #d3d3d3, #ffffff);">
+    <h1>Тест по Холодной войне</h1>
+    <form id="quiz-form">
+        {% for question in questions %}
+            <div class="question">
+                <h2>{{ question.question }}</h2>
+                {% for option in question.options %}
+                    <label>
+                        <input type="radio" name="question{{ question.id }}" value="{{ option }}">
+                        {{ option }}
+                    </label>
+                {% endfor %}
+            </div>
+        {% endfor %}
+        <button type="submit">Проверить результаты</button>
+    </form>
+    <div id="result" class="result hidden">
+        <h2>Ваш результат: <span id="score"></span> из 100</h2>
+    </div>
+</div>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/question.css') }}">
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+{% endblock %}

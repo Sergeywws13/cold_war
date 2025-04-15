@@ -1,0 +1,26 @@
+.question {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.question h2 {
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.question label {
+    font-size: 16px;
+    text-align: center;
+}
+
+button {
+    font-size: 16px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.result h2 {
+    font-size: 24px;
+    text-align: center;
+}
